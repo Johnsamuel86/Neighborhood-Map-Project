@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Berlin Neighborhood Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS and Bootstrap links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+
+  <body>
+    <main>
+      <nav><h2 class="title"> Neighborhood Map </h2></nav>
+      <div class="container-fluid">
+        <div class="col-md-12 container-style">
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="search-area text-center form-group">
+                <input class="form-control" type="text" data-bind="textInput: searchInput, valueUpdate: 'afterkeydown'" placeholder="Search">
+              </div>
+              <ul class="nav flex-column" data-bind="foreach: locations">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#" data-bind="text: title, click: showInfo"></a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-sm-9" id="map"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script type="text/javascript" src="js/locations.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js'></script>    
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <!-- Google Maps call -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAu9H7Y90WGkdHLVOAhQg2JpfMhOkxvNOM&v=3&callback=initApp"  onerror="mapError()"></script>
+  </body>
+</html>

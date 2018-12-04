@@ -1,0 +1,43 @@
+body {
+	font-family: Arial, sans-serif;
+}
+#map {
+	height: 90vh;
+}
+.col-md-12, .col-sm-3 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+/* Navigation styling*/
+nav {
+	width: 100%;
+	background-color: #566573;
+	text-align: center;
+}
+.title {
+	margin: 0;
+	color: #fff;
+}
+
+/* Sidebar with its links */
+.col-sm-3 {
+	background-color: #85929E;
+}
+a {
+	color: #fff;
+}
+a:hover {
+	color: #283747;
+}
+
+/* Info Window name */
+h6 {
+	color: #DC7633;
+}
+@media screen and (min-width: 767px) {
+	main {
+		flex-direction: row;
+		position: relative;
+	}
+}
